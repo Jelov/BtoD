@@ -1,0 +1,7 @@
+
+/bin/rm -rf tmp/slc6_amd64_gcc491/edmplugins/poison/crab_projects/crab_Pythia8_prompt_D0pt20p0to40p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU
+/bin/touch tmp/common/cache/packs/changed
+/bin/rm -rf tmp/slc6_amd64_gcc491/edmplugins/poison/crab_projects/crab_Pythia8_prompt_D0pt2p0to4p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU
+/bin/touch tmp/common/cache/packs/changed
+/bin/rm -rf tmp/slc6_amd64_gcc491/edmplugins/poison/crab_projects/crab_Pythia8_prompt_D0pt60p0to100p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU
+/bin/touch tmp/common/cache/packs/changed

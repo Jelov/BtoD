@@ -1,0 +1,2 @@
+ALL_PACKAGES += HFAnaGenFrags/DAnaPbPb_HFSubset
+subdirs_src_HFAnaGenFrags_DAnaPbPb_HFSubset := src_HFAnaGenFrags_DAnaPbPb_HFSubset_python

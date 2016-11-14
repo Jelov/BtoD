@@ -1,0 +1,9 @@
+use a+b fit instead of A(R+(1-R)) fit format.
+add in trigger cuts, add vertex z < 15 cut, trkEta<1.5 rather than 2.
+for MC, use no weight for invariant mass fit.
+change Dpt vs. ptHat cut for histogram that use ptHat weight.
+fix a small line to assign bin error as 1 in normalize().
+for high pT, the direct side band method need some minor scalings:
+1. the signal Gaussian might be wider than signal region;
+2. the swapped need to be subtracted;
+3. the combinatorial background could be not linear.

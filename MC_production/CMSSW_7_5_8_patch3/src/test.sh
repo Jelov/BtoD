@@ -1,0 +1,10 @@
+nohup time cmsRun Pythia8_prompt_D0pt0p0to2p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU.py &>D0pt0to2_n1000.log &
+nohup time cmsRun Pythia8_prompt_D0pt2p0to4p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU.py &>D0pt2to4_n1000.log &
+nohup time cmsRun Pythia8_prompt_D0pt4p0to10p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU.py &>D0pt4to10_n1000.log &
+
+nohup time cmsRun Pythia8_prompt_D0pt10p0to20p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU.py &>D0pt10to20_n100.log &
+nohup time cmsRun Pythia8_prompt_D0pt20p0to40p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU.py &>D0pt20to40_n5.log &
+nohup time cmsRun Pythia8_prompt_D0pt40p0to60p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU.py &>D0pt40to60_n1.log &
+nohup time cmsRun Pythia8_prompt_D0pt60p0to100p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU.py &>D0pt60to100_n1.log &
+
+

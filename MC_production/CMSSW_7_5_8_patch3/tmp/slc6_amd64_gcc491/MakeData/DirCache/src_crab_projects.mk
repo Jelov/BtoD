@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=crab_projects
+subdirs_src_crab_projects = src_crab_projects_crab_Pythia8_prompt_D0pt40p0to60p0_Pthat0_TuneCUETP8M1_5020GeV_cfi_evtgen130_py_GEN_SIM_PU

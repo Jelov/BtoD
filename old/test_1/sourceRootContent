@@ -1,0 +1,440 @@
+/data/HeavyFlavourRun2/MC2015/Dntuple/PbPb/ntD_EvtBase_20160513_DfinderMC_PbPb_20160502_dPt1tkPt0p5_D0_prompt_Dpt2Dy1p1tkPt0p7tkEta2Decay2p9Dalpha0p14Skim_pthatweight.root
+
+ntDkpi :
+
+******************************************************************************
+*Tree    :ntDkpi    :                                                        *
+*Entries :  4497602 : Total =      5352031347 bytes  File  Size = 2370259213 *
+*        :          : Tree compression factor =   2.26                       *
+******************************************************************************
+*Br    0 :RunNo     : RunNo/I                                                *
+*Entries :  4497602 : Total  Size=   20614524 bytes  File Size  =    2862047 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   7.01     *
+*............................................................................*
+*Br    1 :EvtNo     : EvtNo/I                                                *
+*Entries :  4497602 : Total  Size=   20614524 bytes  File Size  =   11625111 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.73     *
+*............................................................................*
+*Br    2 :LumiNo    : LumiNo/I                                               *
+*Entries :  4497602 : Total  Size=   20642441 bytes  File Size  =    2973986 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.75     *
+*............................................................................*
+*Br    3 :Dsize     : Dsize/I                                                *
+*Entries :  4497602 : Total  Size=   20614524 bytes  File Size  =    6674857 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   3.00     *
+*............................................................................*
+*Br    4 :PVx       : PVx/F                                                  *
+*Entries :  4497602 : Total  Size=   20558690 bytes  File Size  =   19487511 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.03     *
+*............................................................................*
+*Br    5 :PVy       : PVy/F                                                  *
+*Entries :  4497602 : Total  Size=   20558690 bytes  File Size  =   19999808 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    6 :PVz       : PVz/F                                                  *
+*Entries :  4497602 : Total  Size=   20558690 bytes  File Size  =   19999968 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    7 :PVnchi2   : PVnchi2/F                                              *
+*Entries :  4497602 : Total  Size=   20670358 bytes  File Size  =   19228526 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.05     *
+*............................................................................*
+*Br    8 :BSx       : BSx/F                                                  *
+*Entries :  4497602 : Total  Size=   20558690 bytes  File Size  =    2806221 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   7.13     *
+*............................................................................*
+*Br    9 :BSy       : BSy/F                                                  *
+*Entries :  4497602 : Total  Size=   20559530 bytes  File Size  =    2824283 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   7.08     *
+*............................................................................*
+*Br   10 :BSz       : BSz/F                                                  *
+*Entries :  4497602 : Total  Size=   20559530 bytes  File Size  =    2831253 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   7.06     *
+*............................................................................*
+*Br   11 :PVxE      : PVxE/F                                                 *
+*Entries :  4497602 : Total  Size=   20587449 bytes  File Size  =   19641935 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.02     *
+*............................................................................*
+*Br   12 :PVyE      : PVyE/F                                                 *
+*Entries :  4497602 : Total  Size=   20587449 bytes  File Size  =   19641303 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.02     *
+*............................................................................*
+*Br   13 :PVzE      : PVzE/F                                                 *
+*Entries :  4497602 : Total  Size=   20587449 bytes  File Size  =   19577695 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.02     *
+*............................................................................*
+*Br   14 :BSxErr    : BSxErr/F                                               *
+*Entries :  4497602 : Total  Size=   20643287 bytes  File Size  =    2889960 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.95     *
+*............................................................................*
+*Br   15 :BSyErr    : BSyErr/F                                               *
+*Entries :  4497602 : Total  Size=   20643287 bytes  File Size  =    2905058 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.91     *
+*............................................................................*
+*Br   16 :BSzErr    : BSzErr/F                                               *
+*Entries :  4497602 : Total  Size=   20643287 bytes  File Size  =    2901103 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.92     *
+*............................................................................*
+*Br   17 :BSdxdz    : BSdxdz/F                                               *
+*Entries :  4497602 : Total  Size=   20643287 bytes  File Size  =    2914992 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.89     *
+*............................................................................*
+*Br   18 :BSdydz    : BSdydz/F                                               *
+*Entries :  4497602 : Total  Size=   20643287 bytes  File Size  =    2914992 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.89     *
+*............................................................................*
+*Br   19 :BSdxdzErr : BSdxdzErr/F                                            *
+*Entries :  4497602 : Total  Size=   20727044 bytes  File Size  =    2984841 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.76     *
+*............................................................................*
+*Br   20 :BSdydzErr : BSdydzErr/F                                            *
+*Entries :  4497602 : Total  Size=   20727044 bytes  File Size  =    2988797 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.75     *
+*............................................................................*
+*Br   21 :BSWidthX  : BSWidthX/F                                             *
+*Entries :  4497602 : Total  Size=   20699125 bytes  File Size  =    2945786 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.84     *
+*............................................................................*
+*Br   22 :BSWidthXErr : BSWidthXErr/F                                        *
+*Entries :  4497602 : Total  Size=   20782882 bytes  File Size  =    3040667 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.65     *
+*............................................................................*
+*Br   23 :BSWidthY  : BSWidthY/F                                             *
+*Entries :  4497602 : Total  Size=   20699125 bytes  File Size  =    2960884 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.80     *
+*............................................................................*
+*Br   24 :BSWidthYErr : BSWidthYErr/F                                        *
+*Entries :  4497602 : Total  Size=   20782882 bytes  File Size  =    3040667 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.65     *
+*............................................................................*
+*Br   25 :Dindex    : Dindex[Dsize]/I                                        *
+*Entries :  4497602 : Total  Size=   59577835 bytes  File Size  =   14436173 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.09     *
+*............................................................................*
+*Br   26 :Dtype     : Dtype[Dsize]/I                                         *
+*Entries :  4497602 : Total  Size=   59549916 bytes  File Size  =   12915420 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.57     *
+*............................................................................*
+*Br   27 :Dmass     : Dmass[Dsize]/F                                         *
+*Entries :  4497602 : Total  Size=   59549923 bytes  File Size  =   43169466 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.37     *
+*............................................................................*
+*Br   28 :Dpt       : Dpt[Dsize]/F                                           *
+*Entries :  4497602 : Total  Size=   59494085 bytes  File Size  =   36213091 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.63     *
+*............................................................................*
+*Br   29 :Deta      : Deta[Dsize]/F                                          *
+*Entries :  4497602 : Total  Size=   59522004 bytes  File Size  =   37542460 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.57     *
+*............................................................................*
+*Br   30 :Dphi      : Dphi[Dsize]/F                                          *
+*Entries :  4497602 : Total  Size=   59522004 bytes  File Size  =   37937415 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.55     *
+*............................................................................*
+*Br   31 :Dy        : Dy[Dsize]/F                                            *
+*Entries :  4497602 : Total  Size=   59466166 bytes  File Size  =   45381165 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.30     *
+*............................................................................*
+*Br   32 :DvtxX     : DvtxX[Dsize]/F                                         *
+*Entries :  4497602 : Total  Size=   59549923 bytes  File Size  =   37970411 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.55     *
+*............................................................................*
+*Br   33 :DvtxY     : DvtxY[Dsize]/F                                         *
+*Entries :  4497602 : Total  Size=   59549923 bytes  File Size  =   37979053 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.55     *
+*............................................................................*
+*Br   34 :Dd0       : Dd0[Dsize]/F                                           *
+*Entries :  4497602 : Total  Size=   59494085 bytes  File Size  =   36376000 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.62     *
+*............................................................................*
+*Br   35 :Dd0Err    : Dd0Err[Dsize]/F                                        *
+*Entries :  4497602 : Total  Size=   59577842 bytes  File Size  =   36952222 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.60     *
+*............................................................................*
+*Br   36 :Ddxyz     : Ddxyz[Dsize]/F                                         *
+*Entries :  4497602 : Total  Size=   59549923 bytes  File Size  =   36696245 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.61     *
+*............................................................................*
+*Br   37 :DdxyzErr  : DdxyzErr[Dsize]/F                                      *
+*Entries :  4497602 : Total  Size=   59633680 bytes  File Size  =   36874132 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.60     *
+*............................................................................*
+*Br   38 :Dchi2ndf  : Dchi2ndf[Dsize]/F                                      *
+*Entries :  4497602 : Total  Size=   59633680 bytes  File Size  =   37939767 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.56     *
+*............................................................................*
+*Br   39 :Dchi2cl   : Dchi2cl[Dsize]/F                                       *
+*Entries :  4497602 : Total  Size=   59605761 bytes  File Size  =   37220149 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.59     *
+*............................................................................*
+*Br   40 :Ddtheta   : Ddtheta[Dsize]/F                                       *
+*Entries :  4497602 : Total  Size=   59605761 bytes  File Size  =   37438537 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.58     *
+*............................................................................*
+*Br   41 :Dlxy      : Dlxy[Dsize]/F                                          *
+*Entries :  4497602 : Total  Size=   59522004 bytes  File Size  =   36420070 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.62     *
+*............................................................................*
+*Br   42 :Dalpha    : Dalpha[Dsize]/F                                        *
+*Entries :  4497602 : Total  Size=   59577842 bytes  File Size  =   36878072 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.60     *
+*............................................................................*
+*Br   43 :DsvpvDistance : DsvpvDistance[Dsize]/F                             *
+*Entries :  4497602 : Total  Size=   59773275 bytes  File Size  =   36919830 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.60     *
+*............................................................................*
+*Br   44 :DsvpvDisErr : DsvpvDisErr[Dsize]/F                                 *
+*Entries :  4497602 : Total  Size=   59717437 bytes  File Size  =   36342907 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.63     *
+*............................................................................*
+*Br   45 :DsvpvDistance_2D : DsvpvDistance_2D[Dsize]/F                       *
+*Entries :  4497602 : Total  Size=   59857032 bytes  File Size  =   36755061 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.61     *
+*............................................................................*
+*Br   46 :DsvpvDisErr_2D : DsvpvDisErr_2D[Dsize]/F                           *
+*Entries :  4497602 : Total  Size=   59801194 bytes  File Size  =   36299631 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.63     *
+*............................................................................*
+*Br   47 :DtktkRes_chi2ndf : DtktkRes_chi2ndf[Dsize]/F                       *
+*Entries :  4497602 : Total  Size=   59857032 bytes  File Size  =    9192890 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.45     *
+*............................................................................*
+*Br   48 :DtktkRes_chi2cl : DtktkRes_chi2cl[Dsize]/F                         *
+*Entries :  4497602 : Total  Size=   59829113 bytes  File Size  =    9006510 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.58     *
+*............................................................................*
+*Br   49 :DtktkRes_alpha : DtktkRes_alpha[Dsize]/F                           *
+*Entries :  4497602 : Total  Size=   59801194 bytes  File Size  =    9004666 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.58     *
+*............................................................................*
+*Br   50 :DtktkRes_svpvDistance : DtktkRes_svpvDistance[Dsize]/F             *
+*Entries :  4497602 : Total  Size=   59996627 bytes  File Size  =    9203089 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.46     *
+*............................................................................*
+*Br   51 :DtktkRes_svpvDisErr : DtktkRes_svpvDisErr[Dsize]/F                 *
+*Entries :  4497602 : Total  Size=   59940789 bytes  File Size  =    9118493 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.51     *
+*............................................................................*
+*Br   52 :DlxyBS    : DlxyBS[Dsize]/F                                        *
+*Entries :  4497602 : Total  Size=   59577842 bytes  File Size  =   36529136 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.62     *
+*............................................................................*
+*Br   53 :DlxyBSErr : DlxyBSErr[Dsize]/F                                     *
+*Entries :  4497602 : Total  Size=   59661599 bytes  File Size  =   37044867 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.60     *
+*............................................................................*
+*Br   54 :DMaxDoca  : DMaxDoca[Dsize]/F                                      *
+*Entries :  4497602 : Total  Size=   59633680 bytes  File Size  =   37312083 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.58     *
+*............................................................................*
+*Br   55 :Dtrk1Pt   : Dtrk1Pt[Dsize]/F                                       *
+*Entries :  4497602 : Total  Size=   59605761 bytes  File Size  =   36121281 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.63     *
+*............................................................................*
+*Br   56 :Dtrk2Pt   : Dtrk2Pt[Dsize]/F                                       *
+*Entries :  4497602 : Total  Size=   59605761 bytes  File Size  =   33639830 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.76     *
+*............................................................................*
+*Br   57 :Dtrk1Eta  : Dtrk1Eta[Dsize]/F                                      *
+*Entries :  4497602 : Total  Size=   59633680 bytes  File Size  =   36765881 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.61     *
+*............................................................................*
+*Br   58 :Dtrk2Eta  : Dtrk2Eta[Dsize]/F                                      *
+*Entries :  4497602 : Total  Size=   59633680 bytes  File Size  =   35165116 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.68     *
+*............................................................................*
+*Br   59 :Dtrk1Phi  : Dtrk1Phi[Dsize]/F                                      *
+*Entries :  4497602 : Total  Size=   59633680 bytes  File Size  =   37111409 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.59     *
+*............................................................................*
+*Br   60 :Dtrk2Phi  : Dtrk2Phi[Dsize]/F                                      *
+*Entries :  4497602 : Total  Size=   59633680 bytes  File Size  =   35193943 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.68     *
+*............................................................................*
+*Br   61 :Dtrk1PtErr : Dtrk1PtErr[Dsize]/F                                   *
+*Entries :  4497602 : Total  Size=   59689518 bytes  File Size  =   36158985 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.64     *
+*............................................................................*
+*Br   62 :Dtrk2PtErr : Dtrk2PtErr[Dsize]/F                                   *
+*Entries :  4497602 : Total  Size=   59689518 bytes  File Size  =   34160587 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.73     *
+*............................................................................*
+*Br   63 :Dtrk1Dxy  : Dtrk1Dxy[Dsize]/F                                      *
+*Entries :  4497602 : Total  Size=   59633680 bytes  File Size  =   37292061 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.58     *
+*............................................................................*
+*Br   64 :Dtrk2Dxy  : Dtrk2Dxy[Dsize]/F                                      *
+*Entries :  4497602 : Total  Size=   59633680 bytes  File Size  =   35282792 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.67     *
+*............................................................................*
+*Br   65 :Dtrk1PixelHit : Dtrk1PixelHit[Dsize]/F                             *
+*Entries :  4497602 : Total  Size=   59773275 bytes  File Size  =   13875757 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.27     *
+*............................................................................*
+*Br   66 :Dtrk2PixelHit : Dtrk2PixelHit[Dsize]/F                             *
+*Entries :  4497602 : Total  Size=   59773275 bytes  File Size  =   13952491 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.24     *
+*............................................................................*
+*Br   67 :Dtrk1StripHit : Dtrk1StripHit[Dsize]/F                             *
+*Entries :  4497602 : Total  Size=   59773275 bytes  File Size  =   18397373 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   3.22     *
+*............................................................................*
+*Br   68 :Dtrk2StripHit : Dtrk2StripHit[Dsize]/F                             *
+*Entries :  4497602 : Total  Size=   59773275 bytes  File Size  =   18195777 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   3.25     *
+*............................................................................*
+*Br   69 :Dtrk1nStripLayer : Dtrk1nStripLayer[Dsize]/F                       *
+*Entries :  4497602 : Total  Size=   59857032 bytes  File Size  =   18400629 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   3.22     *
+*............................................................................*
+*Br   70 :Dtrk2nStripLayer : Dtrk2nStripLayer[Dsize]/F                       *
+*Entries :  4497602 : Total  Size=   59857032 bytes  File Size  =   18107087 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   3.27     *
+*............................................................................*
+*Br   71 :Dtrk1nPixelLayer : Dtrk1nPixelLayer[Dsize]/F                       *
+*Entries :  4497602 : Total  Size=   59857032 bytes  File Size  =   12803217 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.63     *
+*............................................................................*
+*Br   72 :Dtrk2nPixelLayer : Dtrk2nPixelLayer[Dsize]/F                       *
+*Entries :  4497602 : Total  Size=   59857032 bytes  File Size  =   12937821 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.58     *
+*............................................................................*
+*Br   73 :Dtrk1Chi2ndf : Dtrk1Chi2ndf[Dsize]/F                               *
+*Entries :  4497602 : Total  Size=   59745356 bytes  File Size  =   35790268 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.65     *
+*............................................................................*
+*Br   74 :Dtrk2Chi2ndf : Dtrk2Chi2ndf[Dsize]/F                               *
+*Entries :  4497602 : Total  Size=   59745356 bytes  File Size  =   34096245 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.74     *
+*............................................................................*
+*Br   75 :Dtrk1MassHypo : Dtrk1MassHypo[Dsize]/F                             *
+*Entries :  4497602 : Total  Size=   59773275 bytes  File Size  =   15725087 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   3.77     *
+*............................................................................*
+*Br   76 :Dtrk2MassHypo : Dtrk2MassHypo[Dsize]/F                             *
+*Entries :  4497602 : Total  Size=   59773275 bytes  File Size  =   15725117 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   3.77     *
+*............................................................................*
+*Br   77 :Dtrk1Algo : Dtrk1Algo[Dsize]/I                                     *
+*Entries :  4497602 : Total  Size=   59661592 bytes  File Size  =   12887856 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.59     *
+*............................................................................*
+*Br   78 :Dtrk2Algo : Dtrk2Algo[Dsize]/I                                     *
+*Entries :  4497602 : Total  Size=   59661592 bytes  File Size  =   13910773 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.25     *
+*............................................................................*
+*Br   79 :Dtrk1originalAlgo : Dtrk1originalAlgo[Dsize]/I                     *
+*Entries :  4497602 : Total  Size=   59884944 bytes  File Size  =   12317920 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.82     *
+*............................................................................*
+*Br   80 :Dtrk2originalAlgo : Dtrk2originalAlgo[Dsize]/I                     *
+*Entries :  4497602 : Total  Size=   59884944 bytes  File Size  =   13638097 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.35     *
+*............................................................................*
+*Br   81 :Dtrk1highPurity : Dtrk1highPurity[Dsize]/O                         *
+*Entries :  4497602 : Total  Size=   30795740 bytes  File Size  =    8508466 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   3.55     *
+*............................................................................*
+*Br   82 :Dtrk2highPurity : Dtrk2highPurity[Dsize]/O                         *
+*Entries :  4497602 : Total  Size=   30795740 bytes  File Size  =    8508466 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   3.55     *
+*............................................................................*
+*Br   83 :Dtrk1Idx  : Dtrk1Idx[Dsize]/I                                      *
+*Entries :  4497602 : Total  Size=   59633673 bytes  File Size  =   22274994 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   2.65     *
+*............................................................................*
+*Br   84 :Dtrk2Idx  : Dtrk2Idx[Dsize]/I                                      *
+*Entries :  4497602 : Total  Size=   59633673 bytes  File Size  =   24295631 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   2.43     *
+*............................................................................*
+*Br   85 :Dtrk1EtaErr : Dtrk1EtaErr[Dsize]/F                                 *
+*Entries :  4497602 : Total  Size=   59717437 bytes  File Size  =   35862814 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.65     *
+*............................................................................*
+*Br   86 :Dtrk2EtaErr : Dtrk2EtaErr[Dsize]/F                                 *
+*Entries :  4497602 : Total  Size=   59717437 bytes  File Size  =   34190052 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.73     *
+*............................................................................*
+*Br   87 :Dtrk1PhiErr : Dtrk1PhiErr[Dsize]/F                                 *
+*Entries :  4497602 : Total  Size=   59717437 bytes  File Size  =   36035244 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.64     *
+*............................................................................*
+*Br   88 :Dtrk2PhiErr : Dtrk2PhiErr[Dsize]/F                                 *
+*Entries :  4497602 : Total  Size=   59717437 bytes  File Size  =   34228759 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.73     *
+*............................................................................*
+*Br   89 :Dtrk1Y    : Dtrk1Y[Dsize]/F                                        *
+*Entries :  4497602 : Total  Size=   59577842 bytes  File Size  =   44675162 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.32     *
+*............................................................................*
+*Br   90 :Dtrk2Y    : Dtrk2Y[Dsize]/F                                        *
+*Entries :  4497602 : Total  Size=   59577842 bytes  File Size  =   43337922 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.36     *
+*............................................................................*
+*Br   91 :Dtrk1D0Err : Dtrk1D0Err[Dsize]/F                                   *
+*Entries :  4497602 : Total  Size=   59689518 bytes  File Size  =   36005096 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.64     *
+*............................................................................*
+*Br   92 :Dtrk2D0Err : Dtrk2D0Err[Dsize]/F                                   *
+*Entries :  4497602 : Total  Size=   59689518 bytes  File Size  =   34035139 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.74     *
+*............................................................................*
+*Br   93 :Dtrk1MVAVal : Dtrk1MVAVal[Dsize]/F                                 *
+*Entries :  4497602 : Total  Size=   59717437 bytes  File Size  =   35974079 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.64     *
+*............................................................................*
+*Br   94 :Dtrk2MVAVal : Dtrk2MVAVal[Dsize]/F                                 *
+*Entries :  4497602 : Total  Size=   59717437 bytes  File Size  =   34444762 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   1.72     *
+*............................................................................*
+*Br   95 :Dtrk1Quality : Dtrk1Quality[Dsize]/I                               *
+*Entries :  4497602 : Total  Size=   59745349 bytes  File Size  =   11523742 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   5.14     *
+*............................................................................*
+*Br   96 :Dtrk2Quality : Dtrk2Quality[Dsize]/I                               *
+*Entries :  4497602 : Total  Size=   59745349 bytes  File Size  =   11393834 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   5.19     *
+*............................................................................*
+*Br   97 :Dgen      : Dgen[Dsize]/F                                          *
+*Entries :  4497602 : Total  Size=   59522004 bytes  File Size  =   10485473 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   5.62     *
+*............................................................................*
+*Br   98 :DgenIndex : DgenIndex[Dsize]/I                                     *
+*Entries :  4497602 : Total  Size=   59661592 bytes  File Size  =   10968432 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   5.39     *
+*............................................................................*
+*Br   99 :DgennDa   : DgennDa[Dsize]/I                                       *
+*Entries :  4497602 : Total  Size=   59605754 bytes  File Size  =   10335683 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   5.71     *
+*............................................................................*
+*Br  100 :Dgenpt    : Dgenpt[Dsize]/F                                        *
+*Entries :  4497602 : Total  Size=   59577842 bytes  File Size  =   11850584 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.98     *
+*............................................................................*
+*Br  101 :Dgeneta   : Dgeneta[Dsize]/F                                       *
+*Entries :  4497602 : Total  Size=   59605761 bytes  File Size  =   11897451 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.96     *
+*............................................................................*
+*Br  102 :Dgenphi   : Dgenphi[Dsize]/F                                       *
+*Entries :  4497602 : Total  Size=   59605761 bytes  File Size  =   11890086 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.97     *
+*............................................................................*
+*Br  103 :Dgeny     : Dgeny[Dsize]/F                                         *
+*Entries :  4497602 : Total  Size=   59549923 bytes  File Size  =   11888641 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   4.96     *
+*............................................................................*
+*Br  104 :DgencollisionId : DgencollisionId[Dsize]/I                         *
+*Entries :  4497602 : Total  Size=   59829106 bytes  File Size  =   10680526 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   5.55     *
+*............................................................................*
+*Br  105 :DgenBAncestorpt : DgenBAncestorpt[Dsize]/F                         *
+*Entries :  4497602 : Total  Size=   59829113 bytes  File Size  =    9492446 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.24     *
+*............................................................................*
+*Br  106 :DgenBAncestorpdgId : DgenBAncestorpdgId[Dsize]/I                   *
+*Entries :  4497602 : Total  Size=   59912863 bytes  File Size  =    9369740 *
+*Baskets :    27913 : Basket Size=      32000 bytes  Compression=   6.33     *
+*............................................................................*
+
+
+

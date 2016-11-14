@@ -1,0 +1,29 @@
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+Before Filtrer: total cross section = 1.009e+12 +- 4.503e+08 pb
+Filter efficiency (taking into account weights)= (100) / (1.27664e+06) = 7.833e-                                                                  05 +- 7.833e-06
+Filter efficiency (event-level)= (100) / (1.27664e+06) = 7.833e-05 +- 7.833e-06
+After filter: final cross section = 7.904e+07 +- 7.904e+06 pb
+MemoryReport> Peak virtual size 1393.75 Mbytes
+ Key events increasing vsize:
+[80898] run: 1 lumi: 1 event: 80898  vsize = 1206.5 deltaVsize = 68.5 rss = 738.                                                                  781 delta = 70.1172
+[8332] run: 1 lumi: 1 event: 8332  vsize = 1095.71 deltaVsize = 182.117 rss = 66                                                                  8.664 delta = 126.922
+[84398] run: 1 lumi: 1 event: 84398  vsize = 1393.75 deltaVsize = 187.25 rss = 8                                                                  89.387 delta = 220.723
+[0] run: 0 lumi: 0 event: 0  vsize = 0 deltaVsize = 0 rss = 0 delta = 0
+[0] run: 0 lumi: 0 event: 0  vsize = 0 deltaVsize = 0 rss = 0 delta = 0
+[84400] run: 1 lumi: 1 event: 84400  vsize = 1393.75 deltaVsize = 0 rss = 864.77                                                                   delta = -24.6172
+[84399] run: 1 lumi: 1 event: 84399  vsize = 1393.75 deltaVsize = 0 rss = 864.77                                                                   delta = -24.6172
+[84398] run: 1 lumi: 1 event: 84398  vsize = 1393.75 deltaVsize = 187.25 rss = 8                                                                  89.387 delta = 150.605
+TimeReport> Time report complete in 8401.35 seconds
+ Time Summary:
+ - Min event:   0.00108194
+ - Max event:   31.4473
+ - Avg event:   0.00623671
+ - Total loop:  8400.38
+ - Total job:   8401.35
+ Event Throughput: 151.975 ev/s
+ CPU Summary:
+ - Total loop:  8175.66
+ - Total job:   8175.96
+

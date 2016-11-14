@@ -1,0 +1,2 @@
+ALL_PACKAGES += HFAnaGenFrags/Run1Ana
+subdirs_src_HFAnaGenFrags_Run1Ana := src_HFAnaGenFrags_Run1Ana_BAna_pPb src_HFAnaGenFrags_Run1Ana_DAna_PbPb

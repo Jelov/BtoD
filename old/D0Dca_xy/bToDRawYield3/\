@@ -1,0 +1,258 @@
+#include "TH1F.h"
+#include "TH2F.h"
+#include "TH3F.h"
+#include "TFile.h"
+#include "TH1D.h"
+#include "TCanvas.h"
+#include "TF1.h"
+#include "TStyle.h"
+#include "TRandom.h"
+#include "TLatex.h"
+#include "TLine.h"
+#include "TLegend.h"
+#include "TGraph.h"
+#include "TFitter.h"
+#include "TFitResult.h"
+#include <TLine.h>
+#include <TMath.h>
+
+
+#include <RooFit.h>
+#include <RooRealVar.h>
+#include <RooDataHist.h>
+#include <RooDataSet.h>
+#include <RooHistPdf.h>
+#include <RooPlot.h>
+#include <RooAddPdf.h>
+#include <RooGlobalFunc.h>
+using namespace RooFit;
+
+
+
+Double_t fun_MCP(Double_t *x, Double_t *par){
+
+	double amp=par[0];
+	double frac=par[1];
+	double mean=par[2];
+	double width1=par[3];
+	double widthratio=par[4];
+
+//	Double_t fitval=amp1*TMath::Gaus(x[0],mean1,width1,kTRUE); 
+//  Double_t fitval=amp*TMath::Gaus(x[0],mean1,width1);
+	Double_t fitval=amp*(frac*TMath::Gaus(x[0],mean,width1)+(1-frac)*TMath::Gaus(x[0],mean,width1*widthratio));	
+	return fitval;
+
+}
+
+Double_t fun_MCNP(Double_t *x, Double_t *par){
+
+	Double_t fitval= par[0]*exp(par[1]*fabs(x[0]));
+
+	return fitval;
+
+}
+/*
+Double_t fun_MCNP_smear(Double_t *X, Double_t *par){
+	
+	double amp=par[0];
+	double 
+
+
+
+}
+*/
+
+
+void function_fit_test(){
+
+  gStyle->SetTextSize(0.05);
+  gStyle->SetTextFont(42);
+  gStyle->SetPadRightMargin(0.04);
+  gStyle->SetPadLeftMargin(0.14);
+  gStyle->SetPadTopMargin(0.1);
+  gStyle->SetPadBottomMargin(0.14);
+  gStyle->SetTitleX(.0f);
+  gStyle->SetOptFit(1111);
+  gStyle->SetOptStat(0);
+  gStyle->SetOptTitle(0);
+
+  TFile* fPbPb = new TFile("bFeedDownPbPb.hist.root");
+  TFile* fPbPbMB = new TFile("bFeedDownPbPbMB.hist.root");
+  TFile* fPbPbMC = new TFile("bFeedDownPbPbMC_funfit.hist.root");
+  TFile* fPbPbMBMC = new TFile("bFeedDownPbPbMBMC_funfit.hist.root");
+
+  TH3D* hDataPbPb = (TH3D*)fPbPb->Get("hData");
+  TH3D* hSidebandPbPb = (TH3D*)fPbPb->Get("hSideband");
+  TH3D* hDataPbPbMB = (TH3D*)fPbPbMB->Get("hData");
+  TH3D* hSidebandPbPbMB = (TH3D*)fPbPbMB->Get("hSideband");
+  TH3D* hPtMD0DcaPbPb = (TH3D*)fPbPb->Get("hPtMD0Dca");
+  TH3D* hPtMD0DcaPbPbMB = (TH3D*)fPbPbMB->Get("hPtMD0Dca");
+
+  TH3D* hMCPSignalPbPb = (TH3D*)fPbPbMC->Get("hMCPSignal");
+  TH3D* hMCNPSignalPbPb = (TH3D*)fPbPbMC->Get("hMCNPSignal");
+  TH3D* hMCPSignalPbPbMB = (TH3D*)fPbPbMBMC->Get("hMCPSignal");
+  TH3D* hMCNPSignalPbPbMB = (TH3D*)fPbPbMBMC->Get("hMCNPSignal");
+  TH3D* hPtMD0DcaMCPSignalPbPb = (TH3D*)fPbPbMC->Get("hPtMD0DcaMCPSignal");
+  TH3D* hPtMD0DcaMCPSwappedPbPb = (TH3D*)fPbPbMC->Get("hPtMD0DcaMCPSwapped");
+  TH3D* hPtMD0DcaMCPSignalPbPbMB =(TH3D*)fPbPbMBMC->Get("hPtMD0DcaMCPSignal");
+  TH3D* hPtMD0DcaMCPSwappedPbPbMB = (TH3D*)fPbPbMBMC->Get("hPtMD0DcaMCPSwapped");
+
+  TH3D* hData = (TH3D*)hDataPbPb->Clone("hData");
+  hData->Sumw2();
+  hData->Add(hDataPbPbMB);
+
+  TH3D* hSideband = (TH3D*)hSidebandPbPb->Clone("hSideband");
+  hSideband->Sumw2();
+  hSideband->Add(hSidebandPbPbMB);
+
+  TH3D* hPtMD0Dca = (TH3D*)hPtMD0DcaPbPb->Clone("hPtMD0Dca");
+  hPtMD0Dca->Sumw2();
+  hPtMD0Dca->Add(hPtMD0DcaPbPbMB);
+
+  TH3D* hMCPSignal = (TH3D*)hMCPSignalPbPb->Clone("hMCPSignal");
+  hMCPSignal->Sumw2();
+  hMCPSignal->Add(hMCPSignalPbPbMB);
+
+  TH3D* hMCNPSignal = (TH3D*)hMCNPSignalPbPb->Clone("hMCNPSignal");
+  hMCNPSignal->Sumw2();
+  hMCNPSignal->Add(hMCNPSignalPbPbMB);
+
+  TH3D* hPtMD0DcaMCPSignal = (TH3D*)hPtMD0DcaMCPSignalPbPb->Clone("hPtMD0DcaMCPSignal");
+  hPtMD0DcaMCPSignal->Sumw2();
+  hPtMD0DcaMCPSignal->Add(hPtMD0DcaMCPSignalPbPbMB);
+
+  TH3D* hPtMD0DcaMCPSwapped =(TH3D*)hPtMD0DcaMCPSwappedPbPb->Clone("hPtMD0DcaMCPSwapped");
+  hPtMD0DcaMCPSwapped->Sumw2();
+  hPtMD0DcaMCPSwapped->Add(hPtMD0DcaMCPSwappedPbPbMB);
+
+  const int nPtBins = 14;
+  float ptBins[nPtBins+1] = {2.,3.,4.,5.,6.,8.,10.,12.5,15.0,20.,25.,30.,40.,60.,100};
+/*
+  const int nBinY = 20;
+  Float_t binsY[nBinY+1] = {-0.0734,-0.0562,-0.0428,-0.0320,-0.0236,-0.0170,-0.0118,-0.0078,-0.0046,-0.002,0.0,0.002,0.0046,0.0078,0.0118,0.0170,0.0236,0.0320,0.0428,0.0562,0.0734};
+*/
+//	TH1D* h_MCP_DCAxy = new TH1D("h_MCP_DCAxy", "h_MCP_DCAxy", nBinY, binsY);
+//  TH1D* h_MCNP_DCAxy = new TH1D("h_MCNP_DCAxy", "h_MCNP_DCAxy", nBinY, binsY);
+
+	hMCPSignal->GetXaxis()->SetRangeUser(8,10);
+  hMCNPSignal->GetXaxis()->SetRangeUser(8,10);
+
+	TH1D* h_MCP_DCAxy= (TH1D*)hMCPSignal->Project3D("y")->Clone("h_MCP_DCAxy");
+  TH1D* h_MCNP_DCAxy= (TH1D*)hMCNPSignal->Project3D("y")->Clone("h_MCNP_DCAxy");
+
+
+	TCanvas *c_DCA_xy = new TCanvas("c_DCA_xy","c_DCA_xy",600,600);
+	c_DCA_xy->cd();
+	h_MCP_DCAxy->SetLineColor(1);
+	h_MCP_DCAxy->Draw();
+	h_MCNP_DCAxy->SetLineColor(4);
+	h_MCNP_DCAxy->Draw("SAME");
+		
+	
+
+	TCanvas *c_MCP = new TCanvas("c_MCP","c_MCP",600,600);
+	c_MCP->cd();
+
+	TF1 *f_MCP = new TF1("f_MCP",&fun_MCP,-0.05,0.05,5);
+//	f_MCP->SetParameters(h_MCP_DCAxy->Integral(), 0, h_MCP_DCAxy->GetRMS());
+  f_MCP->SetParameters(77770, 0.7, 0,0.002726,2);
+	cout<<"integral = "<<h_MCP_DCAxy->Integral()<<" , RMS = "<<h_MCP_DCAxy->GetRMS()<<endl;
+
+	TFitResultPtr fitResult;
+	fitResult = h_MCP_DCAxy->Fit("f_MCP","MR","",-0.05,0.05);
+	int fitStatus=1;
+	fitStatus= fitResult->Status();
+  cout<<"fit precision: "<<TFitter::GetPrecision()<<"   status: "<<fitStatus<<endl;
+
+	h_MCP_DCAxy->Draw();
+	f_MCP->Draw("flsame");
+
+
+
+	TCanvas *c_RoofitMCP = new TCanvas("c_RoofitMCP","c_RoofitMCP",800,800);
+	c_RoofitMCP->Divide(2,2);
+	c_RoofitMCP->cd(1);
+
+	RooRealVar x("x","x",-0.05,0.05);
+	RooRealVar mean("mean","mean",0,-0.02,0.02);
+	RooRealVar sigma("sigma","sigma",0.003,0.00001,0.02);
+	RooGaussian gauss("gauss","gaussian PDF",x,mean,sigma);
+	RooPlot* xframe = x.frame();
+//	gauss.plotOn(xframe);
+//	xframe->Draw();
+
+	RooDataHist h_MCP("h_MCP","h_MCP",RooArgList(x),h_MCP_DCAxy);
+
+	gauss.fitTo(h_MCP);
+//	gauss.plotOn(xframe);
+	h_MCP.plotOn(xframe);
+  gauss.plotOn(xframe);
+	gauss.paramOn(xframe);
+	xframe->Draw();
+
+	c_RoofitMCP->cd(2);
+	gPad->SetLogy();
+	xframe->Draw();
+
+
+
+/*
+  TCanvas *c_RoofitMCNP = new TCanvas("c_RoofitMCNP","c_RoofitMCNP",600,600);
+  c_RoofitMCNP->cd();
+
+
+	RooRealVar dca("dca","dca",-0.05,0.05);
+	RooRealVar alpha("alpha","alpha",-100,-20000,-0.00001);
+	RooGenericPdf gp("gp","Generic PDF","exp(abs(dca)*alpha)",RooArgSet(dca,alpha));
+	RooPlot * dcaframe = dca.frame();
+
+	RooDataHist h_MCNP("h_MCNP","h_MCNP",RooArgSet(dca),h_MCNP_DCAxy);
+	gp.fitTo(h_MCNP);
+	h_MCNP.plotOn(dcaframe);
+	gp.plotOn(dcaframe);
+	dcaframe->Draw();
+*/
+
+	TCanvas *c_RoofitMCNP_Conv = new TCanvas("c_RoofitMCNP_Conv","c_RoofitMCNP_Conv",600,600);
+
+  RooRealVar dca("dca","dca",-0.05,0.05);
+
+  RooRealVar alpha("alpha","alpha",-100,-20000,-0.00001);
+  RooGenericPdf gp("gp","Generic PDF","exp(abs(dca)*alpha)",RooArgSet(dca,alpha));
+	
+	RooRealVar mg("mg","mg",0);
+	RooRealVar sg("sg","sg",0.0001,0.0000001,0.1);
+	RooGaussian gauss2("gauss2","gauss2",dca,mg,sg);
+	dca.setBins(10000,"cache");
+	RooFFTConvPdf gpxg("gpxg","exp (x) gauss",dca,gp,gauss2);
+
+
+  RooPlot * dcaframe = dca.frame();
+  RooDataHist h_MCNP("h_MCNP","h_MCNP",RooArgSet(dca),h_MCNP_DCAxy);
+	gpxg.fitTo(h_MCNP);
+	h_MCNP.plotOn(dcaframe);
+	gpxg.plotOn(dcaframe);
+	gpxg.paramOn(dcaframe);
+	dcaframe->GetXaxis()->SetTitle("set x title");
+	dcaframe->Draw();
+
+
+
+
+
+
+
+	TCanvas *c_MCNP = new TCanvas("c_MCNP","c_MCNP",600,600);
+	c_MCNP->cd();
+	TF1 *f_MCNP = new TF1("f_MCNP",&fun_MCNP,-0.05,0.05,2);
+	f_MCNP->SetParameters(1000,-3);
+	
+	TFitResultPtr fitResult_MCNP;
+	fitResult_MCNP = h_MCNP_DCAxy->Fit("f_MCNP","MR","",-0.05,0.05);
+	int fitStatus_MCNP=1;
+	fitStatus_MCNP = fitResult_MCNP->Status();
+	h_MCNP_DCAxy->Draw();
+	f_MCNP->Draw("flsame");
+
+
+}
