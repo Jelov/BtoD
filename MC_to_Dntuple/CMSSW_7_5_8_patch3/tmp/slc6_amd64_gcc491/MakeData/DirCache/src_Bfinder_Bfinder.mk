@@ -1,0 +1,2 @@
+ALL_PACKAGES += Bfinder/Bfinder
+subdirs_src_Bfinder_Bfinder := src_Bfinder_Bfinder_Dntuple src_Bfinder_Bfinder_interface src_Bfinder_Bfinder_src src_Bfinder_Bfinder_weighPthat

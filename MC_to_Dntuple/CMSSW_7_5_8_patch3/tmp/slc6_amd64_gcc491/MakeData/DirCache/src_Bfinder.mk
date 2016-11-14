@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=Bfinder
+subdirs_src_Bfinder = src_Bfinder_Bfinder src_Bfinder_JSON src_Bfinder_batchSub src_Bfinder_crab src_Bfinder_finderMaker src_Bfinder_outDated src_Bfinder_test
