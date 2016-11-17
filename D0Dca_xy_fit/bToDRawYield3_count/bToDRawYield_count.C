@@ -186,18 +186,18 @@ void bToDRawYield_count()
 			TH1D *Dca_MCNPNeg = new TH1D("Dca_MCNPNeg","Dca_MCNPNeg",nBinYh,binsYh);
 
 */
-		for(int i=1; i<=nPtBins; i++)
-//	for(int i=3; i<=3; i++)
+	//		for(int i=1; i<=nPtBins; i++)
+	for(int i=2; i<=2; i++)
 	{
 
 		// for ss ratio
-		h_NsignalDca[i]= new TH1D(Form("h_NsignalDca_pt%i",i),Form("h_NsignalDca%i",i),nBinY,binsY);
-    h_NswappedDca[i]= new TH1D(Form("h_NswappedDca_pt%i",i),Form("h_NswappedDca%i",i),nBinY,binsY);
-    h_NssratioDca[i]= new TH1D(Form("h_NssratioDca_pt%i",i),Form("h_NssratioDca%i",i),nBinY,binsY);
+		h_NsignalDca[i-1]= new TH1D(Form("h_NsignalDca_pt%i",i),Form("h_NsignalDca%i",i),nBinY,binsY);
+		h_NswappedDca[i-1]= new TH1D(Form("h_NswappedDca_pt%i",i),Form("h_NswappedDca%i",i),nBinY,binsY);
+		h_NssratioDca[i-1]= new TH1D(Form("h_NssratioDca_pt%i",i),Form("h_NssratioDca%i",i),nBinY,binsY);
 
-		h_NsignalDca[i]->Sumw2();
-		h_NswappedDca[i]->Sumw2();
-		h_NssratioDca[i]->Sumw2();
+		h_NsignalDca[i-1]->Sumw2();
+		h_NswappedDca[i-1]->Sumw2();
+		h_NssratioDca[i-1]->Sumw2();
 
 		// end for ss ratio	
 
@@ -404,44 +404,44 @@ void bToDRawYield_count()
 		for(int j=1; j<=20; j++)
 		{
 
-		// counting for signal-swapped ratio in candidate region.			
-				 hPtMD0DcaMCPSignal_1->GetXaxis()->SetRangeUser(ptLow+0.001,ptHigh-0.001);
-				 hPtMD0DcaMCPSwapped_1->GetXaxis()->SetRangeUser(ptLow+0.001,ptHigh-0.001);
-				 hPtMD0DcaMCPSignal_1->GetZaxis()->SetRange(j,j);
-				 hPtMD0DcaMCPSwapped_1->GetZaxis()->SetRange(j,j);
+			// counting for signal-swapped ratio in candidate region.			
+			hPtMD0DcaMCPSignal_1->GetXaxis()->SetRangeUser(ptLow+0.001,ptHigh-0.001);
+			hPtMD0DcaMCPSwapped_1->GetXaxis()->SetRangeUser(ptLow+0.001,ptHigh-0.001);
+			hPtMD0DcaMCPSignal_1->GetZaxis()->SetRange(j,j);
+			hPtMD0DcaMCPSwapped_1->GetZaxis()->SetRange(j,j);
 
-				 Double_t Dmass=1.8649;
-				 Double_t minhisto_sig=Dmass-0.025;
-				 Double_t maxhisto_sig=Dmass+0.025;
+			Double_t Dmass=1.8649;
+			Double_t minhisto_sig=Dmass-0.025;
+			Double_t maxhisto_sig=Dmass+0.025;
 
 
-				 TH1D* hMMCSignal_cand = (TH1D*)hPtMD0DcaMCPSignal_1->Project3D("y");
-				 TH1D* hMMCSwapped_cand = (TH1D*)hPtMD0DcaMCPSwapped_1->Project3D("y");
-				 double NsignalErr;
-				 double NSwappedErr;
-				 double NSignal= hMMCSignal_cand->IntegralAndError(hMMCSignal_cand->GetXaxis()->FindBin(minhisto_sig),hMMCSignal_cand->GetXaxis()->FindBin(maxhisto_sig),NsignalErr);
-				 double NSwapped= hMMCSwapped_cand->IntegralAndError(hMMCSwapped_cand->GetXaxis()->FindBin(minhisto_sig),hMMCSwapped_cand->GetXaxis()->FindBin(maxhisto_sig),NSwappedErr);
-				 double Ntotal = NSignal+NSwapped;
-				 double NsignalRatio= NSignal/Ntotal;
-				 double NsignalRatioErr=1/Ntotal*sqrt(NsignalRatio*(1-NsignalRatio/Ntotal)); 	
+			TH1D* hMMCSignal_cand = (TH1D*)hPtMD0DcaMCPSignal_1->Project3D("y");
+			TH1D* hMMCSwapped_cand = (TH1D*)hPtMD0DcaMCPSwapped_1->Project3D("y");
+			double NsignalErr;
+			double NSwappedErr;
+			double NSignal= hMMCSignal_cand->IntegralAndError(hMMCSignal_cand->GetXaxis()->FindBin(minhisto_sig),hMMCSignal_cand->GetXaxis()->FindBin(maxhisto_sig),NsignalErr);
+			double NSwapped= hMMCSwapped_cand->IntegralAndError(hMMCSwapped_cand->GetXaxis()->FindBin(minhisto_sig),hMMCSwapped_cand->GetXaxis()->FindBin(maxhisto_sig),NSwappedErr);
+			double Ntotal = NSignal+NSwapped;
+			double NsignalRatio= NSignal/Ntotal;
+			double NsignalRatioErr=1/Ntotal*sqrt(NsignalRatio*(1-NsignalRatio/Ntotal)); 	
 
-				 cout<<"\n\n***********"<<endl;
-				 cout<<"pt i = "<<i<<" , dca j = "<<j<<endl;
-				 cout<<"NSignal = "<<NSignal<<" ,NSwapped = "<<NSwapped<<endl;
-				 cout<<"NsignalRatio = "<<NsignalRatio<<" , NsignalRatioErr = "<<NsignalRatioErr<<endl;
-				 cout<<"********\n\n"<<endl;
+			cout<<"\n\n***********"<<endl;
+			cout<<"pt i = "<<i<<" , dca j = "<<j<<endl;
+			cout<<"NSignal = "<<NSignal<<" ,NSwapped = "<<NSwapped<<endl;
+			cout<<"NsignalRatio = "<<NsignalRatio<<" , NsignalRatioErr = "<<NsignalRatioErr<<endl;
+			cout<<"********\n\n"<<endl;
 
-			h_NsignalDca[i]->SetBinContent(j,NSignal);
-			h_NsignalDca[i]->SetBinError(j,NsignalErr);
-      h_NswappedDca[i]->SetBinContent(j,NSwapped);
-      h_NswappedDca[i]->SetBinError(j,NSwappedErr);
+			h_NsignalDca[i-1]->SetBinContent(j,NSignal);
+			h_NsignalDca[i-1]->SetBinError(j,NsignalErr);
+			h_NswappedDca[i-1]->SetBinContent(j,NSwapped);
+			h_NswappedDca[i-1]->SetBinError(j,NSwappedErr);
 			if (NsignalRatio<=1 && NsignalRatio>=0 && NsignalRatioErr<=999 && NsignalRatioErr>=0)
 			{
-			  h_NssratioDca[i]->SetBinContent(j,NsignalRatio);
-	      h_NssratioDca[i]->SetBinError(j,NsignalRatioErr);
+				h_NssratioDca[i-1]->SetBinContent(j,NsignalRatio);
+				h_NssratioDca[i-1]->SetBinError(j,NsignalRatioErr);
 			}
 			else {
-        h_NssratioDca[i]->SetBinContent(j,0);
+				h_NssratioDca[i-1]->SetBinContent(j,0);
 			}
 
 			// end of counting ss ratio.
@@ -748,9 +748,11 @@ void bToDRawYield_count()
 		delete hD0DcaMCPSignal;
 		delete hD0DcaMCNPSignal;
 
-	}
+	} //end of for(int i=1; i<=nPtBins; i++)
 	c1->cd();
 
+
+/*
 	TH1D* hStupidJie = new TH1D("hStupidJie", "", 100, 0, 100);
 	hStupidJie->GetYaxis()->SetRangeUser(0,1);
 	hStupidJie->GetXaxis()->SetTitle("p_{T} (GeV/c)");
@@ -827,7 +829,7 @@ void bToDRawYield_count()
 	for (int i = 0; i<nPtBins;i++){
 		cout<<"ptbin "<<i<<" ,total yield: "<<totalYield[i]<<endl;
 	}
-
+*/
 
 	cout<<"end of main"<<endl;
 
@@ -911,6 +913,32 @@ TF1* fitMass(TH1D* hData, TH1D* hMCSignal, TH1D* hMCSwapped, double* CountResult
 	Double_t Dmass=1.8649;
 	Double_t minhisto_sig=Dmass-0.025;
 	Double_t maxhisto_sig=Dmass+0.025;
+
+  int minBinFind_sig = hData->GetXaxis()->FindBin(minhisto_sig)+1;
+  int maxBinFind_sig = hData->GetXaxis()->FindBin(maxhisto_sig);
+  int minBinFind_all = hData->GetXaxis()->FindBin(minhisto)+1;
+  int maxBinFind_all = hData->GetXaxis()->FindBin(maxhisto);
+//  double count_data_all = hData->Integral(minBinFind_all+1,maxBinFind_all);
+//  double fit_data_all = f->Integral(minhisto,maxhisto)/hData->GetBinWidth(1);
+
+//  double count_data_sig = hData->Integral(minBinFind_sig+1,maxBinFind_sig);
+//  double fit_data_sig = f->Integral(minhisto_sig,maxhisto_sig)/hData->GetBinWidth(1);
+
+//  cout<<"count_data_all = "<<count_data_all<<" , fit_data_all = "<<fit_data_all<<endl;
+//  cout<<"count_data_sig = "<<count_data_sig<<" , fit_data_sig = "<<fit_data_sig<<endl;
+
+  double minhisto_data = hData->GetXaxis()->GetBinLowEdge(minBinFind_all);
+  double maxhisto_data = hData->GetXaxis()->GetBinLowEdge(maxBinFind_all)+hData->GetXaxis()->GetBinWidth(maxBinFind_all);
+  cout<<"minhisto_data = " <<minhisto_data<<" , minhisto = "<<minhisto<<endl;
+  cout<<"maxhisto_data = " <<maxhisto_data<<" , maxhisto = "<<maxhisto<<endl;
+
+  double minhisto_dataSig = hData->GetXaxis()->GetBinLowEdge(minBinFind_sig);
+  double maxhisto_dataSig = hData->GetXaxis()->GetBinLowEdge(maxBinFind_sig)+hData->GetXaxis()->GetBinWidth(maxBinFind_sig);
+
+  cout<<"minhisto_dataSig = " <<minhisto_dataSig<<" , minhisto_sig = "<<minhisto_sig<<endl;
+  cout<<"maxhisto_dataSig = " <<maxhisto_dataSig<<" , maxhisto_sig = "<<maxhisto_sig<<endl;
+
+
 
 	TF1* f = new TF1("fMass","[0]*([7]*([9]*Gaus(x,[1],[2]*(1+[11]))/(sqrt(2*3.1415927)*[2]*(1+[11]))+(1-[9])*Gaus(x,[1],[10]*(1+[11]))/(sqrt(2*3.1415927)*[10]*(1+[11])))+(1-[7])*Gaus(x,[1],[8]*(1+[11]))/(sqrt(2*3.1415927)*[8]*(1+[11])))+[3]+[4]*x+[5]*x*x+[6]*x*x*x", 1.7, 2.0);
 	f->SetParLimits(4,-1000,1000);
@@ -1010,14 +1038,14 @@ TF1* fitMass(TH1D* hData, TH1D* hMCSignal, TH1D* hMCSwapped, double* CountResult
 	double integralErr = background->IntegralError(minhisto,maxhisto,background->GetParameters(),covmatArr);
 	double integralVal = background->Integral(minhisto,maxhisto);
 
-	double integralErr_sig = background->IntegralError(minhisto_sig,maxhisto_sig,background->GetParameters(),covmatArr);
-	double integralVal_sig = background->Integral(minhisto_sig,maxhisto_sig);
+	double integralErr_sig = background->IntegralError(minhisto_dataSig,maxhisto_dataSig,background->GetParameters(),covmatArr);
+	double integralVal_sig = background->Integral(minhisto_dataSig,maxhisto_dataSig);
 
 	double binwidth=hData->GetBinWidth(1);
 
-	double cand_integralVal= hData->Integral(hData->GetXaxis()->FindBin(minhisto_sig),hData->GetXaxis()->FindBin(maxhisto_sig));
+	double cand_integralVal= hData->Integral(minBinFind_sig,maxBinFind_sig);
 	double cand_integralErr;
-	double cand_integralVal2= hData->IntegralAndError(hData->GetXaxis()->FindBin(minhisto_sig),hData->GetXaxis()->FindBin(maxhisto_sig),cand_integralErr);
+	double cand_integralVal2= hData->IntegralAndError(minBinFind_sig,maxBinFind_sig,cand_integralErr);
 
 	cout<<"\n\n**********************\n"<<endl;
 	cout<<"integralErr = "<<integralErr<<" ,integralVal = "<<integralVal<<endl;	
@@ -1031,6 +1059,31 @@ TF1* fitMass(TH1D* hData, TH1D* hMCSignal, TH1D* hMCSwapped, double* CountResult
 	CountResult[1]=sqrt(integralErr_sig*integralErr_sig/binwidth/binwidth+cand_integralErr*cand_integralErr);
 
 	cout<<"CountResult[0] = "<<CountResult[0]<<" , CountResult[1] = "<<CountResult[1]<<endl;
+/*
+	// compare count and Integral in all range and signal range.
+	int minBinFind_sig = hData->GetXaxis()->FindBin(minhisto_dataSig);
+	int maxBinFind_sig = hData->GetXaxis()->FindBin(maxhisto_sig);
+	int minBinFind_all = hData->GetXaxis()->FindBin(minhisto);
+	int maxBinFind_all = hData->GetXaxis()->FindBin(maxhisto);
+	double count_data_all = hData->Integral(minBinFind_all+1,maxBinFind_all);
+	double fit_data_all = f->Integral(minhisto,maxhisto)/hData->GetBinWidth(1);
+
+	double count_data_sig = hData->Integral(minBinFind_sig+1,maxBinFind_sig);
+	double fit_data_sig = f->Integral(minhisto_dataSig,maxhisto_sig)/hData->GetBinWidth(1); 
+
+	cout<<"count_data_all = "<<count_data_all<<" , fit_data_all = "<<fit_data_all<<endl;
+	cout<<"count_data_sig = "<<count_data_sig<<" , fit_data_sig = "<<fit_data_sig<<endl;
+
+	double BinLowEdge = hData->GetXaxis()->GetBinLowEdge(minBinFind_all);
+	double BinHighEdge = hData->GetXaxis()->GetBinLowEdge(maxBinFind_all)+hData->GetXaxis()->GetBinWidth(maxBinFind_all);
+	cout<<"BinLowEdge = "	<<BinLowEdge<<" , BinHighEdge = "<<BinHighEdge<<endl;
+	cout<<"minhisto = "<<minhisto<<" ,maxhisto = "<<BinHighEdge<<endl;
+
+  double BinLowEdge_sig = hData->GetXaxis()->GetBinLowEdge(minBinFind_sig);
+  double BinHighEdge_sig = hData->GetXaxis()->GetBinLowEdge(maxBinFind_sig)+hData->GetXaxis()->GetBinWidth(maxBinFind_sig);
+  cout<<"BinLowEdge_sig = " <<BinLowEdge_sig<<" , BinHighEdge_sig = "<<BinHighEdge_sig<<endl;
+  cout<<"minhisto_sig = "<<minhisto_sig<<" ,maxhisto_sig = "<<BinHighEdge_sig<<endl;
+*/
 
 	TF1* mass = new TF1("fSignal","[0]*([3]*([4]*Gaus(x,[1],[2]*(1+[6]))/(sqrt(2*3.1415927)*[2]*(1+[6]))+(1-[4])*Gaus(x,[1],[5]*(1+[6]))/(sqrt(2*3.1415927)*[5]*(1+[6]))))");
 	mass->SetParameters(f->GetParameter(0),f->GetParameter(1),f->GetParameter(2),f->GetParameter(7),f->GetParameter(9),f->GetParameter(10),f->GetParameter(11));
