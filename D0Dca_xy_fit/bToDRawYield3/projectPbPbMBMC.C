@@ -11,10 +11,10 @@ void projectPbPbMBMC()
   gStyle->SetOptStat(0);
   gStyle->SetOptTitle(0);
 
-//  TFile* infMCP = new TFile("/data/HeavyFlavourRun2/MC2015/Dntuple/PbPb/ntD_EvtBase_20160513_DfinderMC_PbPb_20160502_dPt1tkPt0p5_D0_prompt_Dpt2Dy1p1tkPt0p7tkEta2Decay2p9Dalpha0p14Skim_pthatweight.root");
-//  TFile* infMCNP = new TFile("/data/HeavyFlavourRun2/MC2015/Dntuple/PbPb/ntD_EvtBase_20160513_DfinderMC_PbPb_20160502_dPt1tkPt0p5_D0_nonprompt_Dpt2Dy1p1tkPt0p7tkEta2Decay2p9Dalpha0p14Skim_pthatweight.root");
-  TFile* infMCP = new TFile("/afs/cern.ch/work/c/chengchi/work/Project/BtoD/MC_Dntuples/PbPb/Dntuple_PbPb_prompt_mergeall.root");
-  TFile* infMCNP = new TFile("/afs/cern.ch/work/c/chengchi/work/Project/BtoD/MC_Dntuples/PbPb/Dntuple_PbPb_Nonprompt_mergeall.root");
+  TFile* infMCP = new TFile("/data/HeavyFlavourRun2/MC2015/Dntuple/PbPb/ntD_EvtBase_20160513_DfinderMC_PbPb_20160502_dPt1tkPt0p5_D0_prompt_Dpt2Dy1p1tkPt0p7tkEta2Decay2p9Dalpha0p14Skim_pthatweight.root");
+  TFile* infMCNP = new TFile("/data/HeavyFlavourRun2/MC2015/Dntuple/PbPb/ntD_EvtBase_20160513_DfinderMC_PbPb_20160502_dPt1tkPt0p5_D0_nonprompt_Dpt2Dy1p1tkPt0p7tkEta2Decay2p9Dalpha0p14Skim_pthatweight.root");
+//  TFile* infMCP = new TFile("/afs/cern.ch/work/c/chengchi/work/Project/BtoD/MC_Dntuples/PbPb/Dntuple_PbPb_prompt_mergeall.root");
+//  TFile* infMCNP = new TFile("/afs/cern.ch/work/c/chengchi/work/Project/BtoD/MC_Dntuples/PbPb/Dntuple_PbPb_Nonprompt_mergeall.root");
 
   
   TTree* tMCP = (TTree*)infMCP->Get("ntDkpi");

@@ -1,0 +1,12 @@
+
+Processing efficiency.C("NonPromptPP_new")...
+selmcgen = ((GisSignal==1||GisSignal==2)&&(Gy>-1&&Gy<1))
+selmcgenacceptance = ((GisSignal==1||GisSignal==2)&&(Gy>-1&&Gy<1))&&abs(Gtk1eta)<1.5&&abs(Gtk2eta)<1.5&&Gtk1pt>2.0&&Gtk2pt>2.0
+cut_recoonly = abs(PVz)<15&&pBeamScrapingFilter&&pPAprimaryVertexFilter&&Dy>-1.&&Dy<1.&&Dtrk1highPurity&&Dtrk2highPurity&&Dtrk1Pt>2.0&&Dtrk2Pt>2.0&&abs(Dtrk1Eta)<1.5&&abs(Dtrk2Eta)<1.5&&Dtrk1PtErr/Dtrk1Pt<0.3&&Dtrk2PtErr/Dtrk2Pt<0.3
+AAAA cut = abs(PVz)<15&&pBeamScrapingFilter&&pPAprimaryVertexFilter&&Dy>-1.&&Dy<1.&&Dtrk1highPurity&&Dtrk2highPurity&&Dtrk1Pt>2.0&&Dtrk2Pt>2.0&&(DsvpvDistance/DsvpvDisErr)>3.5&&(DlxyBS/DlxyBSErr)>2.5&&Dchi2cl>0.05&&Dalpha<0.12&&abs(Dtrk1Eta)<1.5&&abs(Dtrk2Eta)<1.5&&Dtrk1PtErr/Dtrk1Pt<0.3&&Dtrk2PtErr/Dtrk2Pt<0.3
+fit function parameters = (Max$(Gpt)<pthat/1.2)*(0.0116437+Max$(Gpt)*(0.0602697)+Max$(Gpt)*Max$(Gpt)*(-0.00226879)+Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*(3.91035e-05)+Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*(-3.0699e-07)+Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*(8.73234e-10))
+step1
+step2
+step3
+step4
+cut_all name = ((Max$(Gpt)<pthat/1.2)*(0.0116437+Max$(Gpt)*(0.0602697)+Max$(Gpt)*Max$(Gpt)*(-0.00226879)+Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*(3.91035e-05)+Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*(-3.0699e-07)+Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*Max$(Gpt)*(8.73234e-10)))*(((((abs(PVz)<15&&pBeamScrapingFilter&&pPAprimaryVertexFilter&&Dy>-1.&&Dy<1.&&Dtrk1highPurity&&Dtrk2highPurity&&Dtrk1Pt>2.0&&Dtrk2Pt>2.0&&(DsvpvDistance/DsvpvDisErr)>3.5&&(DlxyBS/DlxyBSErr)>2.5&&Dchi2cl>0.05&&Dalpha<0.12&&abs(Dtrk1Eta)<1.5&&abs(Dtrk2Eta)<1.5&&Dtrk1PtErr/Dtrk1Pt<0.3&&Dtrk2PtErr/Dtrk2Pt<0.3)&&((Dgen==23333)))&&(Dpt>=20))||(((abs(PVz)<15&&pBeamScrapingFilter&&pPAprimaryVertexFilter&&Dy>-1.&&Dy<1.&&Dtrk1highPurity&&Dtrk2highPurity&&Dtrk1Pt>1.0&&Dtrk2Pt>1.0&&Dtrk1PtErr/Dtrk1Pt<0.3&&Dtrk2PtErr/Dtrk2Pt<0.3&&abs(Dtrk1Eta)<1.5&&abs(Dtrk2Eta)<1.5&&(DsvpvDistance/DsvpvDisErr)>3.5&&(DlxyBS/DlxyBSErr)>2.5&&Dchi2cl>0.05&&Dalpha<0.12)&&((Dgen==23333)))&&(Dpt<20)))&&(Dpt>2 && Dpt<4))
